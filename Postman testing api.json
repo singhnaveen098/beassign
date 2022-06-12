@@ -1,0 +1,3454 @@
+{
+	"info": {
+		"_postman_id": "3e6a3aac-8d90-4c06-883b-7b2043c4df42",
+		"name": "Testing api",
+		"description": "Testing the different endpoints for admin, teachers and students.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"naveen007@gmail.com\",\r\n    \"password\":\"naveen007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin logged in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"naveen007@gmail.com\",\r\n    \"password\":\"naveen007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"122-4TiQzqEtQKU1vImqz1vKqmvVG8g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 14:58:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5a02a3699d48deef2190f\",\n    \"auth_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NTkzNX0.loPrCpIdk8mkb4yPzg5KJ83RMMJ9edL1FvXByZ3lmpQ\",\n    \"name\": \"Naveen\",\n    \"role\": \"admin\",\n    \"email\": \"naveen007@gmail.com\"\n}"
+				},
+				{
+					"name": "teacher logged in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"neo007@gmail.com\",\r\n    \"password\":\"neo007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-Z/o5Ob4SAjEam8pBwMJYoIM8W/s\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:38:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ff904965f73c83ff6b0a\",\n    \"auth_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U\",\n    \"name\": \"Neo\",\n    \"role\": \"teacher\",\n    \"email\": \"neo007@gmail.com\"\n}"
+				},
+				{
+					"name": "student logged in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"david007@gmail.com\",\r\n    \"password\":\"david007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"125-6bp8GJRp8IkzuWUiAKpobDuyCZ4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 16:03:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5a4d1325b22f8bc74bbe5\",\n    \"auth_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWE0ZDEzMjViMjJmOGJjNzRiYmU1Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjU1MDQ5ODI2fQ.AEcHje6SfAKNQ5zR5xT3JghaiI0Ka42MxWvu3-rN8D4\",\n    \"name\": \"David\",\n    \"role\": \"student\",\n    \"email\": \"david007@gmail.com\"\n}"
+				},
+				{
+					"name": "incorrect credentials",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"naveen00@gmail.com\",\r\n    \"password\":\"naveen007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-EbeMKp8ABH0k4+4z0JJAMdO/rqY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:16:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Please try to login with correct credentials\"\n}"
+				}
+			]
+		},
+		{
+			"name": "admin add teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Neo\",\r\n    \"email\":\"neo007@gmail.com\",\r\n    \"password\":\"neo007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/admin/teacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"teacher"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "teacher added",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Neo\",\r\n    \"email\":\"neo007@gmail.com\",\r\n    \"password\":\"neo007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-b/m+Ivyu/Dj/u1MIXTPuPlgnVD8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:00:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ff904965f73c83ff6b0a\",\n    \"message\": \"Teacher added\"\n}"
+				},
+				{
+					"name": "teacher exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Neo\",\r\n    \"email\":\"neo007@gmail.com\",\r\n    \"password\":\"neo007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-5q5Y5hXlLDb/L2ITyN1Rcprv9KM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:16:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"A teacher with same email exists so please choose another one\"\n}"
+				},
+				{
+					"name": "unauthorized access",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Neo\",\r\n    \"email\":\"neo007@gmail.com\",\r\n    \"password\":\"neo007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-b/cytRJRM2bC8QpF6yxYdXCW+5Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:39:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Unauthorized access\""
+				}
+			]
+		},
+		{
+			"name": "admin add student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ram\",\r\n    \"email\":\"ram007@gmail.com\",\r\n    \"password\":\"ram007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/admin/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"student"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "student added",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ram\",\r\n    \"email\":\"ram007@gmail.com\",\r\n    \"password\":\"ram007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-OPmGWb40Ekntj8PNjpXAt1IKsZU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:00:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ffa74965f73c83ff6b0d\",\n    \"message\": \"Student added\"\n}"
+				},
+				{
+					"name": "student exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ram\",\r\n    \"email\":\"ram007@gmail.com\",\r\n    \"password\":\"ram007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-2UBVlqzTf5fpPCSA4D0GuHXAu18\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:15:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"A student with same email exists so please choose another one\"\n}"
+				}
+			]
+		},
+		{
+			"name": "admin add class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"classname\":\"12thA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/admin/class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"class"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "class added",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classname\":\"12thA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/class",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"class"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-Hlp/RLdLaauB5fBVZmAi2Sh8/t0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:01:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ffb54965f73c83ff6b10\",\n    \"message\": \"Class added\"\n}"
+				},
+				{
+					"name": "class already exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classname\":\"12thA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/class",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"class"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47-Ern+JqwLnAN5yO9Tr4DuQxaD4Ow\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:15:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"A class with same name exists so please choose another one\"\n}"
+				}
+			]
+		},
+		{
+			"name": "admin get list of teachers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/fetchallteachers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"fetchallteachers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin get list of teachers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/fetchallteachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"fetchallteachers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9b-/luQEtllNr6CWq5GdM3n5lRxkxI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:01:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62a5fa7e4965f73c83ff6aef\",\n        \"name\": \"Happy\",\n        \"email\": \"happy007@gmail.com\"\n    },\n    {\n        \"_id\": \"62a5ff904965f73c83ff6b0a\",\n        \"name\": \"Neo\",\n        \"email\": \"neo007@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "admin get list of students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/fetchallstudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"fetchallstudents"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin get list of students",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/fetchallstudents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"fetchallstudents"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9b-BUWCbu7jG3xEABkVS3W4qf0/3J8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:01:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62a5a4d1325b22f8bc74bbe5\",\n        \"name\": \"David\",\n        \"email\": \"david007@gmail.com\"\n    },\n    {\n        \"_id\": \"62a5ffa74965f73c83ff6b0d\",\n        \"name\": \"Ram\",\n        \"email\": \"ram007@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "admin delete a class",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/class/:classid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"class",
+						":classid"
+					],
+					"variable": [
+						{
+							"key": "classid",
+							"value": "62a5ffb54965f73c83ff6b10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "class deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "classid",
+									"value": "62a5ffb54965f73c83ff6b10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-8az/7ZAqEmMZwaEjK60ZqsyAOu8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:11:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ffb54965f73c83ff6b10\",\n    \"message\": \"Class removed\"\n}"
+				},
+				{
+					"name": "class not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "classid",
+									"value": "62a5ffb54965f73c83ff6b11"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-WDv6pq5vq9ZwagRRuDRStPgjEFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:13:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Class not found"
+				}
+			]
+		},
+		{
+			"name": "admin delete a teacher",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/teacher/:teacherid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"teacher",
+						":teacherid"
+					],
+					"variable": [
+						{
+							"key": "teacherid",
+							"value": "62a5fa7e4965f73c83ff6aef"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "teacher deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5fa7e4965f73c83ff6aef"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-KiJ46409knAeXaBkgMIxR72j3fg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:13:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5fa7e4965f73c83ff6aef\",\n    \"message\": \"Teacher removed\"\n}"
+				},
+				{
+					"name": "teacher not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5a4e7325b22f8bc74b675"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-35bQCDQACGIV9yJO1UEO0CL8/wY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:12:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Teacher not found"
+				}
+			]
+		},
+		{
+			"name": "admin delete a student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/student/:studentid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"student",
+						":studentid"
+					],
+					"variable": [
+						{
+							"key": "studentid",
+							"value": "62a5ffa74965f73c83ff6b0d"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "student deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5ffa74965f73c83ff6b0d"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-etnTIIJOPOGYHN8ubadrn6YVdvA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:18:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5ffa74965f73c83ff6b0d\",\n    \"message\": \"Student removed\"\n}"
+				},
+				{
+					"name": "student not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5c60b40092ac3e2b3f70b"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-b1dac4Tto92ldivDtX6hQvwxEr0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:17:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Student not found"
+				}
+			]
+		},
+		{
+			"name": "admin update class",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"12thB\",\r\n    \"teacher\":[\"62a5fa7e4965f73c83ff6aef\"],\r\n    \"student\":[\"62a5a4d1325b22f8bc74bbe5\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/admin/classup/:classid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"classup",
+						":classid"
+					],
+					"variable": [
+						{
+							"key": "classid",
+							"value": "62a5fe864965f73c83ff6b04"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin update class",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"12thB\",\r\n    \"teacher\":[\"62a5fa7e4965f73c83ff6aef\"],\r\n    \"student\":[\"62a5a4d1325b22f8bc74bbe5\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/classup/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"classup",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "classid",
+									"value": "62a5fe864965f73c83ff6b04"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-+yDZSl0jpRq3cwZy7P5sFXc4HQU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 14:58:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a5fe864965f73c83ff6b04\",\n    \"message\": \"Class Updated\"\n}"
+				},
+				{
+					"name": "class not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"12thB\",\r\n    \"teacher\":[\"62a5fa7e4965f73c83ff6aef\"],\r\n    \"student\":[\"62a5a4d1325b22f8bc74bbe5\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/admin/classup/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"classup",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "classid",
+									"value": "62a5fe864965f73c83ff6b08"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-WDv6pq5vq9ZwagRRuDRStPgjEFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:18:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Class not found"
+				}
+			]
+		},
+		{
+			"name": "admin map teacher to class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"teacher",
+						":teacherid",
+						"class",
+						":classid"
+					],
+					"variable": [
+						{
+							"key": "teacherid",
+							"value": "62a5ff904965f73c83ff6b0a"
+						},
+						{
+							"key": "classid",
+							"value": "62a602f14965f73c83ff6b1d"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "teacher mapped to class",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5ff904965f73c83ff6b0a"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-jkDCI4z/nRlVVDHrAMcjp9QRLcI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:26:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Teacher added to class\"\n}"
+				},
+				{
+					"name": "teacher already mapped to class",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5ff904965f73c83ff6b0a"
+								},
+								{
+									"key": "classid",
+									"value": "62a5fe864965f73c83ff6b04"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-9htV3Kwuo+N3D4UxT9lksmkUGAY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:20:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"Teacher already mapped to the class\"\n}"
+				},
+				{
+					"name": "class not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5ff904965f73c83ff6b0a"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1e"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-WDv6pq5vq9ZwagRRuDRStPgjEFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:27:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Class not found"
+				},
+				{
+					"name": "teacher not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5ff904965f73c83ff6b0c"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-35bQCDQACGIV9yJO1UEO0CL8/wY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:32:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Teacher not found"
+				},
+				{
+					"name": "not a teacher id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/teacher/:teacherid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"teacher",
+								":teacherid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "teacherid",
+									"value": "62a5a02a3699d48deef2190f"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-jpcUcWWuag/Y9PPunbfKNXKL/wc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:36:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "This is not a teacher id!!"
+				}
+			]
+		},
+		{
+			"name": "admin map student to class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"student",
+						":studentid",
+						"class",
+						":classid"
+					],
+					"variable": [
+						{
+							"key": "studentid",
+							"value": "62a5a4d1325b22f8bc74bbe5"
+						},
+						{
+							"key": "classid",
+							"value": "62a602f14965f73c83ff6b1d"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "student mapped to class",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5a4d1325b22f8bc74bbe5"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-SmDtbCCUXAPUVfIkIeHJQ6wX4OA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:29:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Student added to class\"\n}"
+				},
+				{
+					"name": "student already mapped",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5a4d1325b22f8bc74bbe5"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-2NuNBdZ1CtZZDmV6dTZMTj9wf34\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:30:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"Student already mapped to the class\"\n}"
+				},
+				{
+					"name": "class not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5a4d1325b22f8bc74bbe5"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1e"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-WDv6pq5vq9ZwagRRuDRStPgjEFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:30:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Class not found"
+				},
+				{
+					"name": "student not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5a4d1325b22f8bc74bbe0"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-b1dac4Tto92ldivDtX6hQvwxEr0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:31:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Student not found"
+				},
+				{
+					"name": "not a student id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWEwMmEzNjk5ZDQ4ZGVlZjIxOTBmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY1NTA0NDMyM30.Pm7TgRLcPW2hmPWlx224zJV8XrqDHjaov6knvQEYnhQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/admin/student/:studentid/class/:classid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"admin",
+								"student",
+								":studentid",
+								"class",
+								":classid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5a02a3699d48deef2190f"
+								},
+								{
+									"key": "classid",
+									"value": "62a602f14965f73c83ff6b1d"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-mZvi+aKC2J5ni6FxEOTEAet/xv8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:37:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "This is not a student id!!"
+				}
+			]
+		},
+		{
+			"name": "teacher get list of students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/teacher/fetchallstudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"teacher",
+						"fetchallstudents"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "student list recieved",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/teacher/fetchallstudents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"fetchallstudents"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9b-uetu6kglb+Cg/Qoh2BQhsLbOapQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:41:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62a5a4d1325b22f8bc74bbe5\",\n        \"name\": \"David\",\n        \"email\": \"david007@gmail.com\"\n    },\n    {\n        \"_id\": \"62a6092e4681e889ddf06782\",\n        \"name\": \"Ram\",\n        \"email\": \"ram007@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "teacher generate score card for student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subname\":\"Physics\",\r\n    \"score\":95,\r\n    \"comment\":\"Keep it up\",\r\n    \"examdate\":\"2022-06-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/teacher/student/:studentid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"teacher",
+						"student",
+						":studentid"
+					],
+					"variable": [
+						{
+							"key": "studentid",
+							"value": "62a6092e4681e889ddf06782"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "scorecard added",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subname\":\"Physics\",\r\n    \"score\":95,\r\n    \"comment\":\"Keep it up\",\r\n    \"examdate\":\"2022-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/teacher/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a6092e4681e889ddf06782"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-lqRLiB1XDBdUV3BSU+tuo6GUdho\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:45:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62a60a244681e889ddf06786\",\n    \"message\": \"Scorecard added\"\n}"
+				},
+				{
+					"name": "scorecard already exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subname\":\"Physics\",\r\n    \"score\":95,\r\n    \"comment\":\"Keep it up\",\r\n    \"examdate\":\"2022-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/teacher/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a6092e4681e889ddf06782"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-gju2XOqwK5ATs9ROCUTlk0qKj8o\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:52:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": \"scorecard already exists\"\n}"
+				},
+				{
+					"name": "student not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subname\":\"Physics\",\r\n    \"score\":95,\r\n    \"comment\":\"Keep it up\",\r\n    \"examdate\":\"2022-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/teacher/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a6092e4681e889ddf06787"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-b1dac4Tto92ldivDtX6hQvwxEr0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:54:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Student not found"
+				},
+				{
+					"name": "not a student id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subname\":\"Physics\",\r\n    \"score\":95,\r\n    \"comment\":\"Keep it up\",\r\n    \"examdate\":\"2022-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/teacher/student/:studentid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"student",
+								":studentid"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "62a5ff904965f73c83ff6b0a"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-mZvi+aKC2J5ni6FxEOTEAet/xv8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:54:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "This is not a student id!!"
+				}
+			]
+		},
+		{
+			"name": "teacher get ranklist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/teacher/getrank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"teacher",
+						"getrank"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ranklist recieved",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/teacher/getrank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"getrank"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52-hH4y8xp4jcPCTd+qqhqPhZ3WVlw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 15:58:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"David\",\n        \"percentage\": 94.33333333333333\n    },\n    {\n        \"name\": \"Ram\",\n        \"percentage\": 92.5\n    }\n]"
+				},
+				{
+					"name": "unauthorized access",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWE0ZDEzMjViMjJmOGJjNzRiYmU1Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjU1MDQ5ODI2fQ.AEcHje6SfAKNQ5zR5xT3JghaiI0Ka42MxWvu3-rN8D4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/teacher/getrank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"teacher",
+								"getrank"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-b/cytRJRM2bC8QpF6yxYdXCW+5Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 16:05:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Unauthorized access\""
+				}
+			]
+		},
+		{
+			"name": "student view scorecard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWE0ZDEzMjViMjJmOGJjNzRiYmU1Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjU1MDQ5ODI2fQ.AEcHje6SfAKNQ5zR5xT3JghaiI0Ka42MxWvu3-rN8D4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/student/score",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"student",
+						"score"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "scorecard for all subject recieved",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWE0ZDEzMjViMjJmOGJjNzRiYmU1Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjU1MDQ5ODI2fQ.AEcHje6SfAKNQ5zR5xT3JghaiI0Ka42MxWvu3-rN8D4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/student/score",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"student",
+								"score"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "382"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17e-8E+4p8Kn1U5/hYGqsc3ep/0mANA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 16:04:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62a60cdbc6fa20781d64b8dd\",\n        \"subname\": \"Physics\",\n        \"score\": 97,\n        \"comment\": \"Keep it up\",\n        \"examdate\": \"2022-06-10T00:00:00.000Z\"\n    },\n    {\n        \"_id\": \"62a60ce9c6fa20781d64b8e1\",\n        \"subname\": \"Chemistry\",\n        \"score\": 92,\n        \"comment\": \"Keep it up\",\n        \"examdate\": \"2022-06-11T00:00:00.000Z\"\n    },\n    {\n        \"_id\": \"62a60cf8c6fa20781d64b8e5\",\n        \"subname\": \"Maths\",\n        \"score\": 94,\n        \"comment\": \"Keep it up\",\n        \"examdate\": \"2022-06-09T00:00:00.000Z\"\n    }\n]"
+				},
+				{
+					"name": "not a student account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNWZmOTA0OTY1ZjczYzgzZmY2YjBhIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjU1MDQ4MzIyfQ.xwvsfj8261cJHP8W9dtlMStVGkdI_EjSMZC4r4gZt5U",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/student/score",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"student",
+								"score"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-GSZeW7K7Woxw7D/BZ4VVQth8I+E\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 16:05:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"This is not a student account.\""
+				}
+			]
+		}
+	]
+}
